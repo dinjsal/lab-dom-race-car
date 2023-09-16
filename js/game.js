@@ -1,5 +1,5 @@
 class Game {
-    constructor () {
+    constructor() {
         this.startScreen = document.querySelector('#game-intro');
         this.gameScreen = document.querySelector('#game-screen');
         this.gameEndScreen = document.querySelector('#game-end');
@@ -13,12 +13,11 @@ class Game {
     }
 
     start() {
-        this.gameScreen.height = `${this.height}px`;
-        this.gameScreen.width = `${this.width}px`;
+        this.gameScreen.style.height = `${this.height}px`;
+        this.gameScreen.style.width = `${this.width}px`;
 
         this.startScreen.style.display = 'none';
-
-        this.gameScreen.style.display = 'block';
+        this.gameScreen.style.display = "block"
 
         this.gameLoop();
     }
@@ -27,14 +26,14 @@ class Game {
         if (this.gameIsOver) return;
 
         this.update();
-
+        
         window.requestAnimationFrame(() => {
             this.gameLoop();
         })
     }
 
     update() {
-        //empty for now
+        //empty for now 
     }
 
 }
